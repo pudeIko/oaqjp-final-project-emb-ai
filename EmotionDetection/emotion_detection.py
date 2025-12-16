@@ -10,6 +10,9 @@ def emotion_detector(text_to_analyse):
     # Sending a POST request
     resp = requests.post(url, json=myobj, headers=header)
 
+    return resp.text
+
+    
     output = {}
     output["anger"] = None
     output["disgust"] = None
